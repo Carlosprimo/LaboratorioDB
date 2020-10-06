@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Carlosprimo/LaboratorioDB#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.10.8",
+    "node-restful": "^0.2.6"
   }
 }
