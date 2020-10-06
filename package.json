@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Carlosprimo/LaboratorioDB/issues"
   },
-  "homepage": "https://github.com/Carlosprimo/LaboratorioDB#readme"
+  "homepage": "https://github.com/Carlosprimo/LaboratorioDB#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
