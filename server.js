@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 // MongoDB
-mongoose.connect('mongodb://localhost/rest_test');
+mongoose.connect('mongodb+srv://pruebaDB:1qwer5432@cluster0.uakml.mongodb.net/pruebaDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 // Express
 var app = express();
