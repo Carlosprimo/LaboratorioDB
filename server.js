@@ -1,23 +1,24 @@
 // Dependencies
 const express = require('express');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
-// MongoDB
-let url = 'mongodb://localhost:27017/';
-mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
-
+const path = require('path');
+const exphbs = require('express-handlebars')
+require('./database')
 // Express
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Settings
-
 app.set('port',process.env.PORT || 3000);
-
+app.set('views',path.join(__dirname,'views'));
+app.engine('.html',exphbs({
+    defaultLayout: 'index',
+    extname: 'html'
+}));
+app.set('views engine','.html');
 // Routes
-app.use('/api', require('./routes/api'));
+app.use('/', require('./routes/api'));
 
 // Start server
 app.listen(app.get('port'),()=>{

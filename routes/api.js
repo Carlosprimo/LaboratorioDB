@@ -7,7 +7,7 @@ var Product = require('../models/product');
 
 // Routes
 Product.methods(['get', 'put', 'post', 'delete']);
-Product.register(router, '/products');
+Product.register(router, '/');
 
 // Return router
 module.exports = router;
