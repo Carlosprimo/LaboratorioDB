@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 // MongoDB
-mongoose.connect('mongodb://localhost:27017/', {useNewUrlParser: true, useUnifiedTopology: true});
+let url = 'mongodb://localhost:27017/';
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 
 // Express
 var app = express();
