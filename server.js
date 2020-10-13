@@ -8,6 +8,7 @@ require('./database')
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use('/', require('./routes/api'));
 
 // Settings
 app.set('port',process.env.PORT || 3000);
@@ -17,8 +18,8 @@ app.engine('.html',exphbs({
     extname: 'html'
 }));
 app.set('views engine','.html');
-// Routes
-app.use('/', require('./routes/api'));
+
+app.use(express.static(path.join(__dirname,'public')))
 
 // Start server
 app.listen(app.get('port'),()=>{
