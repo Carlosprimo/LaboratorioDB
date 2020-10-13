@@ -1,13 +1,8 @@
-// Dependencies
-var restful = require('node-restful');
-var mongoose = restful.mongoose;
+const connection = require('./connection');
 
-// Schema
-var productSchema = new mongoose.Schema({
-    name: String,
-    sku: String,
-    price: Number
-});
+const init = async () => {
+  const db = await connection(); // obtenemos la conexión
+  await db.collection('user').find();
+};
 
-// Return model
-module.exports = restful.model('Products', productSchema);
+init();

@@ -2,8 +2,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const exphbs = require('express-handlebars')
-require('./database')
+const exphbs = require('express-handlebars');
+
 // Express
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));

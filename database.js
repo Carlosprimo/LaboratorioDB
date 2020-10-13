@@ -1,8 +1,16 @@
 const mongoose = require('mongoose');
 
-let url = 'mongodb://localhost:27017/';
-mongoose.connect(url, {
-    useNewUrlParser: true, 
-    useUnifiedTopology: true})
-.then(db => console.log('DB is connected'))
-.catch(err => console.error(err));
+const URI = process.env.MONGOOSE_URI
+    ? process.env.MONGOOSE_URI
+    : 'mongodb://localhost/COVID_COLOMBIA';
+
+mongoose.connect(URI, {
+    useNewUrlParser: true,
+    useCreateIndex: true
+});
+
+const connection = mongoose.connection;
+
+connection.once('open', () => {
+    console.log('Database is connected');
+});
