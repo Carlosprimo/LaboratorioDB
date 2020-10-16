@@ -3,14 +3,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const exphbs = require('express-handlebars');
-const db =  require('./database')
 
 // Express
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/', require('./routes/api'));
-
 // Settings
 app.set('port',process.env.PORT || 3000);
 app.set('views',path.join(__dirname,'views'));
