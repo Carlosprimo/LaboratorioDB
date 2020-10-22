@@ -23,5 +23,5 @@ app.use(express.static(path.join(__dirname,'public')))
 // Start server
 app.listen(app.get('port'),()=>{
     console.log('Listening on port 3000');
+    require('./database')
 });
-
