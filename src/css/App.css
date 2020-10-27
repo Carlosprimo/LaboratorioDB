@@ -1,4 +1,4 @@
-@import './normalize.css'
+@import './normalize.css';
 
 :root {
 	--main-color: rgb(15, 255, 163);
@@ -14,9 +14,8 @@
 
 body {
 	margin: 0;
-	font-family: -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
-	  'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-	  sans-serif;
+	font-family: -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans',
+		'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -32,29 +31,30 @@ a:hover {
 }
 
 body::-webkit-scrollbar {
-   width: 6px;
-   height: 6px;
+	width: 6px;
+	height: 6px;
 }
 
 body::-webkit-scrollbar-thumb {
-   display: none;
-   border-radius: 5px;
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   -o-border-radius: 5px;
+	display: none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
 }
 
-body::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:active {
-   display: block;
-   background-color: #00000060;
+body::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:active {
+	display: block;
+	background-color: #00000060;
 }
 
 body::-webkit-scrollbar-track {
-   background: transparent;
+	background: transparent;
 }
 
-body::-webkit-scrollbar-corner{
-   background-color: transparent;
+body::-webkit-scrollbar-corner {
+	background-color: transparent;
 }
 
 .root {
