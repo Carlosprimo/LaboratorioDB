@@ -1,0 +1,99 @@
+.section__aside--right {
+	width: 20%;
+}
+
+.aside__info--total-deaths{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   top: 15px;
+   left: 5%;
+   width: 90%;
+   outline: 1px solid;
+}
+
+.aside__info--total-deaths span.info--title{
+	padding-top: 10px;
+	font-size: 17px;
+}
+
+.aside__info--total-deaths span.info--quantity{
+	padding-bottom: 10px;
+	font-size: 34px;
+	color: #222;
+}
+
+.aside__menu--department-deaths{
+   position: relative;
+	width: 100%;
+	height: calc((100vh - 50px)/2 - 100px);
+   outline: 1px solid;
+}
+
+.aside__menu--department-deaths span{
+	display: block;
+	padding: 10px 15px;
+	background-color: #0005;
+	font-size: 17px;
+	text-align: start;
+	cursor: pointer;
+}
+
+.aside__menu--department-deaths span:hover{
+	background-color: #0008;
+	text-decoration: none;
+}
+
+.aside__menu--department-deaths span.active{
+	background-color: #000a;
+}
+
+.aside__info--total-recovers{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   top: 30px;
+   left: 5%;
+   width: 90%;
+   outline: 1px solid;
+}
+
+.aside__info--total-recovers span.info--title{
+	padding-top: 10px;
+	font-size: 17px;
+}
+
+.aside__info--total-recovers span.info--quantity{
+	padding-bottom: 10px;
+	font-size: 34px;
+	color: #091;
+}
+
+.aside__menu--department-recovers{
+   position: relative;
+	width: 100%;
+	height: calc((100vh - 50px)/2 - 100px);
+   outline: 1px solid;
+}
+
+.aside__menu--department-recovers span{
+	display: block;
+	padding: 10px 15px;
+	background-color: #0915;
+	font-size: 17px;
+	text-align: start;
+	cursor: pointer;
+}
+
+.aside__menu--department-recovers span:hover{
+	background-color: #0918;
+	text-decoration: none;
+}
+
+.aside__menu--department-recovers span.active{
+	background-color: #091a;
+}

@@ -1,0 +1,14 @@
+.section__section--center {
+	width: 60%;
+}
+
+.section__map-cases{
+	width: 100%;
+	height: 80%;
+}
+
+.section__map-cases canvas.map{
+	width: 100%;
+	height: 100%;
+	outline: 1px solid;
+}

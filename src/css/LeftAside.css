@@ -1,0 +1,80 @@
+.section__aside--left {
+	width: 20%;
+}
+
+.aside__info--total-cases{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   top: 15px;
+   left: 5%;
+   width: 90%;
+   height: 15vh;
+   outline: 1px solid;
+}
+
+.aside__info--total-cases span:first-of-type{
+	font-size: 20px;
+}
+
+.aside__info--total-cases span:last-of-type{
+	font-size: 42px;
+	color: #d00;
+}
+
+.aside__menu--department-cases{
+   position: relative;
+   top: 30px;
+   left: 5%;
+   width: 90%;
+   height: 63vh;
+   outline: 1px solid;
+}
+
+.aside__menu--department-cases p{
+	padding: 8px 0;
+	height: 20px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.aside__menu--department-cases span{
+	display: block;
+	padding: 10px 15px;
+	background-color: #d005;
+	font-size: 17px;
+	text-align: start;
+	cursor: pointer;
+}
+
+.aside__menu--department-cases span:hover{
+	background-color: #d008;
+	text-decoration: none;
+}
+
+.aside__menu--department-cases span.active{
+	background-color: #d00a;
+}
+
+.aside__info--updated{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	top: 45px;
+   left: 5%;
+	width: 90%;
+	height: 6vh;
+	outline: 1px solid;
+}
+
+.aside__info--updated span:first-child{
+	font-size: 12px;
+}
+
+.aside__info--updated span:last-child{
+	font-size: 18px;
+}
