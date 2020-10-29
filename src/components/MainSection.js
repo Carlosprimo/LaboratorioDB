@@ -6,7 +6,7 @@ import CenterSection from './CenterSection';
 export default class MainSection extends Component {
 	render() {
 		return (
-			<section class="main__section--first">
+			<section className="main__section--first">
 				<LeftAside />
 				<CenterSection />
 				<RightAside />
