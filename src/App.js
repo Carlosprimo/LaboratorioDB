@@ -11,7 +11,7 @@ function App() {
 		<Router>
 			<Navbar />
 			<Route path="/" exact component={MainSection} />
-			<Route path="/#graphics" exact component={SecondSection} />
+			<Route path="/graphics" exact component={SecondSection} />
 		</Router>
 	);
 }

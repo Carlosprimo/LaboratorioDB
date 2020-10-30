@@ -4,11 +4,11 @@ import '../css/CenterSection.css';
 export default class CenterSection extends Component {
 	render() {
 		return (
-			<section class="section__section--center">
-				<div class="section__map-cases">
+			<section className="section__section--center">
+				<div className="section__map-cases">
 					{' '}
 					CANVAS MAP
-					<canvas class="map"></canvas>
+					<canvas className="map"></canvas>
 				</div>
 			</section>
 		);

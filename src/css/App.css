@@ -67,3 +67,11 @@ body::-webkit-scrollbar-corner {
 	width: 100%;
 	min-height: calc(100vh - 50px);
 }
+
+.main__section--second {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	min-height: 100vh;
+}

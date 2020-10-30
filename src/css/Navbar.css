@@ -41,7 +41,7 @@
 }
 
 .menu--option {
-	width: 15%;
+	width: fit-content;
 	min-width: 50px;
 }
 
