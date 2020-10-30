@@ -1,0 +1,6 @@
+.section__chart--line{
+   margin: auto;
+   width: 90%;
+   height: 50vh;
+   outline: 1px solid;
+}

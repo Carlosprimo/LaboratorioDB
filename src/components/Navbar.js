@@ -16,7 +16,7 @@ export default class Nabvar extends Component {
 				<nav className="header__nav">
 					<ul className="nav__menu">
 						<li className="menu--option">
-							<Link to="/#graphics">GraphicsName</Link>
+							<Link to="/graphics">Graphics</Link>
 						</li>
 						<li className="menu--option">
 							<Link to="/">Item 2</Link>

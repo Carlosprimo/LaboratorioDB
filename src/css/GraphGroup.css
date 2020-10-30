@@ -1,0 +1,9 @@
+.section__graph{
+   width: 50%;
+   height: 100%;
+}
+
+.graph__options{
+   margin: auto;
+   width: 90%;
+}
