@@ -2,55 +2,68 @@
 	width: 20%;
 }
 
+
 .aside__info--total-cases{
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    position: relative;
-   top: 15px;
+   top: 38px;
    left: 5%;
    width: 90%;
    height: 15vh;
-   outline: 1px solid;
+   border: 1px;
+   border-radius: 10px;
+   background-color: #02363d;
 }
 
 .aside__info--total-cases span:first-of-type{
-	font-size: 20px;
+	font-size: 28px;
+	font-weight: bold;
+	color: #fff;
 }
 
 .aside__info--total-cases span:last-of-type{
-	font-size: 42px;
-	color: #d00;
+	font-size: 26px;
+	color: #fff;
 }
 
 .aside__menu--department-cases{
    position: relative;
-   top: 30px;
+   top: 10%;
    left: 5%;
    width: 90%;
-   height: 63vh;
-   outline: 1px solid;
+   height: 40vh;
+   border: 1px;
+   border-radius: 10px;
+   background-color: #028090;
+   overflow-y: scroll;
 }
 
 .aside__menu--department-cases p{
 	padding: 8px 0;
 	height: 20px;
 	font-size: 18px;
+	color: #fff;
 	text-align: center;
+	border: 1px ;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px
 }
 
 .aside__menu--department-cases span{
 	display: block;
-	padding: 10px 15px;
-	background-color: #d005;
+	padding: 9px 15px;
+	background-color: #fff;
 	font-size: 17px;
 	text-align: start;
 	cursor: pointer;
+	border-top: 1px solid;
 }
 
 .aside__menu--department-cases span:hover{
-	background-color: #d008;
+	background-color: rgba(252, 249, 249, 0.719);
 	text-decoration: none;
 }
 
@@ -64,11 +77,12 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	top: 45px;
+	top: 13%;
    left: 5%;
 	width: 90%;
 	height: 6vh;
-	outline: 1px solid;
+	border: 1px solid;
+	border-radius: 10px;
 }
 
 .aside__info--updated span:first-child{

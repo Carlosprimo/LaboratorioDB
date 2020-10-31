@@ -7,7 +7,6 @@ export default class CenterSection extends Component {
 			<section className="section__section--center">
 				<div className="section__map-cases">
 					{' '}
-					CANVAS MAP
 					<canvas className="map"></canvas>
 				</div>
 			</section>

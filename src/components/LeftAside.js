@@ -13,7 +13,7 @@ export default class LeftAside extends Component {
 					<p>
 						<strong>Cases by Deparment</strong>
 					</p>
-					<span className="active">100.000 Atlántico</span>
+					<span>100.000 Atlántico</span>
 					<span>200.000 Antioquia</span>
 					<span>50.000 Amazonas</span>
 					<span>80.000 Cundinamarca</span>
