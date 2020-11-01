@@ -1,72 +1,76 @@
 require('dotenv').config();
-
-var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
-var url = process.env.url2
-let departamentos = ["Amazonas",
-  "Antioquia",
-  "Arauca",
-  "Archipiélago de San Andrés Providencia y Santa Catalina",
-  "Atlántico",
-  "Barranquilla D.E.",
-  "Bogotá D.C.",
-  "Bolívar",
-  "Boyacá",
-  "Buenaventura D.E.",
-  "Caldas",
-  "Caquetá",
-  "Cartagena D.T. y C.",
-  "Casanare",
-  "Cauca",
-  "Cesar",
-  "Chocó",
-  "Cundinamarca",
-  "Córdoba",
-  "Guainía",
-  "Guaviare",
-  "Huila",
-  "La Guajira",
-  "Magdalena",
-  "Meta",
-  "Nariño",
-  "Norte de Santander",
-  "Putumayo",
-  "Quindío",
-  "Risaralda",
-  "Santa Marta D.T. y C.",
-  "Santander",
-  "Sucre",
-  "Tolima",
-  "Valle del Cauca",
-  "Vaupés",
-  "Vichada"]
+
+var url = process.env.url2;
+var arrayCantCasos = [];
+var arrayCantMuertos = [];
+var arrayCantEdad1 = [];
+var arrayCantEdad2 = [];
+var arrayCantEdad3 = [];
+var SexoF = [];
+var SexoM = [];
+
+let collections =
+  ["Amazonas",
+    "Antioquia",
+    "Arauca",
+    "ArchipiélagodeSanAndrésProvidenciaySantaCatalina",
+    "Atlántico",
+    "Bogotá",
+    "Bolívar",
+    "Boyacá",
+    "Caldas",
+    "Caquetá",
+    "Casanare",
+    "Cauca",
+    "Cesar",
+    "Chocó",
+    "Cundinamarca",
+    "Córdoba",
+    "Guainía",
+    "Guaviare",
+    "Huila",
+    "LaGuajira",
+    "Magdalena",
+    "Meta",
+    "Nariño",
+    "NortedeSantander",
+    "Putumayo",
+    "Quindío",
+    "Risaralda",
+    "Santander",
+    "Sucre",
+    "Tolima",
+    "ValledelCauca",
+    "Vaupés",
+    "Vichada"];
 
 MongoClient.connect(url, { useUnifiedTopology: true }, dataProcessing);
 
 function dataProcessing(err, db) {
   if (err) throw err;
-  var dbo = db.db("CovidInfo");
-  casosDept = [];
-  for (let i = 0; i < departamentos.length; i++) {
-    const element = departamentos[i];
-    dbo.collection("personInfo").find({ nombre_depa: element }).count()
-      .then(casos => {
-        casosDept[i] = parseInt(casos);
-        console.log("Número de casos en " + element + " es: ", casos);
-      }).catch((e) => {
-        console.log('handle error here: ', e.message);
-      });
-  }
-  for (let i = 0; i < departamentos.length; i++) {
-    const element = departamentos[i];
-    dbo.collection("personInfo").find({'Fecha_muerte':''}).count()
-      .then(muertos => {
-        console.log(muertos)
-        console.log("Número de Muertos en " + element + " es: ", casosDept[i] - muertos);
-      }).catch((e) => {
-        console.log('handle error here: ', e.message);
-      });
-  }
+  var dbo = db.db("COVID_COLOMBIA");
+  collections.forEach(c => {
+    var d = dbo.collection(c).find({});
+    arrayCantCasos.push(d.count());
+    var d = dbo.collection(c).find({ Estado: "Fallecido" });
+    arrayCantMuertos.push(d.count());
+    var d = dbo.collection(c).find({ Edad: { $lt: "31" } });
+    arrayCantEdad1.push(d.count());
+    var d = dbo.collection(c).find({ $and: [{ Edad: { $gt: "30" } }, { Edad: { $lt: "61" } }] });
+    arrayCantEdad2.push(d.count());
+    var d = dbo.collection(c).find({ Edad: { $gt: "60" } });
+    arrayCantEdad3.push(d.count());
+    var d = dbo.collection(c).find({ Sexo: "F" });
+    SexoF.push(d.count());
+    var d = dbo.collection(c).find({ Sexo: "M" });
+    SexoM.push(d.count());
+  });
+  arrayCantMuertos.forEach(element => {
+    element.then(d => {
+      console.log(d);
+    });
+  });
   db.close();
-};
+}
 
