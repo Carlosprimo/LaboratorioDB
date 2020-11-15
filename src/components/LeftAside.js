@@ -11,7 +11,7 @@ export default class LeftAside extends Component {
 				</div>
 				<div className="aside__menu--department-cases">
 					<p>
-						<strong>Cases by Deparment</strong>
+						<strong>Cases by Deparment </strong>
 					</p>
 					<span>100.000 Atlántico</span>
 					<span>200.000 Antioquia</span>

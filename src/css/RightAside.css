@@ -23,12 +23,14 @@
 	font-size: 28px;
 	color: #fff;
 	font-weight: bolder;
+	font-family: 'Euclid';
 }
 
 .aside__info--total-deaths span.info--quantity{
 	padding-bottom: 10px;
 	font-size: 26px;
 	color: #fff;
+	font-family: 'Euclid';
 }
 
 .aside__menu--department-deaths{
@@ -45,10 +47,12 @@
 	display: block;
 	padding: 7px 15px;
 	background-color: #fff;
-	font-size: 17px;
+	font-size: 18px;
 	text-align: start;
 	cursor: pointer;
 	border-top: 1px solid;
+	border-color: #028090;
+	font-family: 'Euclid';
 }
 
 .aside__menu--department-deaths span:hover{
@@ -79,12 +83,14 @@
 	font-size: 28px;
 	color: #fff;
 	font-weight: bolder;
+	font-family: 'Euclid';
 }
 
 .aside__info--total-recovers span.info--quantity{
 	padding-bottom: 10px;
 	font-size: 26px;
 	color: #fff;
+	font-family: 'Euclid';
 }
 
 .aside__menu--department-recovers{
@@ -101,10 +107,12 @@
 	display: block;
 	padding: 7px 15px;
 	background-color: #fff;
-	font-size: 17px;
+	font-size: 18px;
 	text-align: start;
 	cursor: pointer;
 	border-top: 1px solid;
+	border-color: #028090;
+	font-family: 'Euclid';
 }
 
 .aside__menu--department-recovers span:hover{
